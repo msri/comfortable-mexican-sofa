@@ -42,7 +42,9 @@ Rails.application.routes.draw do
         :format       => :xml
     end
     
-    get '/' => :render_html,  :as => 'cms_html',  :path => "(*cms_path)"
+    get '/' => :render_html,
+        :format => 'html',
+        :as => 'cms_html', :path => "(*cms_path)"
   end
   
 end if ComfortableMexicanSofa.config.use_default_routes
